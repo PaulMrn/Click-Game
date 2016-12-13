@@ -1,0 +1,18 @@
+body{
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.bcgs {
+    position: relative;
+}
+
+.bcg1{
+    position: absolute;
+    top: 100%;
+}
+
+.bcg2 {
+    position: absolute;
+    top: 100%;
+}
