@@ -19,7 +19,7 @@ $(document).ready(function(){
     $('body').mousewheel(function(event) {
 
         if (event.deltaFactor >= 100) event.deltaFactor = event.deltaFactor / 40;
-        if (event.deltaY === -1) nI+=event.deltaFactor;
+        if (event.deltaY <= -1) nI+=event.deltaFactor;
 
         if (nI - oI >= 1.25){
 
