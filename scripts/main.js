@@ -29,7 +29,7 @@ $(document).ready(function(){
         if (nI - oI >= 1.25){
             bgTop = parseFloat(bg1.css('top'));
             bgTop2 = parseFloat(bg2.css('top'));
-            nbPerc = (nI - oI) / 0.75;
+            nbPerc = (nI - oI) / 0.50;
             var value = bgTop - (nbPerc * onePerc);
             var value2 = bgTop2 - (nbPerc * onePerc);
             bg1.css('top', value+'px');
@@ -70,7 +70,7 @@ $(document).ready(function(){
 
 function resize(){
     var iw = window.innerWidth,
-        ih = window.innerHeight,
+        ih = window.innerHeight + 30,
         bgs = document.querySelectorAll(".bcgImg"),
         toolImg = document.querySelector(".toolImg");
 

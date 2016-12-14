@@ -1,6 +1,12 @@
 body{
     margin: 0 auto;
     overflow: hidden;
+    background: #eee;
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+	font-weight: regular;
+	color: #494949;
+    line-height: 15px;
 }
 
 .middle-align{
@@ -31,24 +37,257 @@ body{
     height: auto;
 }
 
-.counter{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 100px;
-    background: #fff;
-    padding: 10px;
+.start-screen {
+    background-color: #c8a97d;
 }
 
-.counter div {
-    margin-bottom: 15px;
+/**********************************/
+
+.one-screen-view{
+	width: 100%;
+	height: 100%;
+
 }
 
-.counter p{
-    margin-left: 20px;
+.wrapper {
+	padding: 5%;
+	height: 100%;
 }
 
-.counter a{
-    margin-left: 90px;
+/****** SHOP ******/ 
+
+.shop {
+	position: absolute;
+	top: 10%;
+	width: 20%;
+	background-color: rgba(255, 255, 255, 0.7);
 }
+
+.shop .upgrade {
+	border-bottom: 1px solid white;
+	width: 100%;
+	padding: 5%;
+}
+
+.shop .upgrade .icon-upgrade {
+	display: inline-block;
+	width: 15%;
+	height: 100%; 
+	vertical-align: top;
+}
+
+.shop .upgrade .info-upgrade {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.shop .upgrade .info-upgrade .condition-upgrade{
+	padding-top: 4px;
+}
+
+.condition-upgrade-responsive{
+	display: inline-block;
+}
+
+.shop .upgrade .info-upgrade .condition-upgrade img {
+	display: inline-block;
+	width: 20px;
+	vertical-align: middle;
+}
+
+.shop .upgrade .info-upgrade .condition-upgrade p {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.shop .upgrade .buy-upgrade {
+	display: inline-block;
+	float: right;
+	width: 15%;
+	height: 100%;
+	vertical-align: top;
+}
+
+.shop .upgrade .buy-upgrade img{
+	width: 100%;
+	height: 100%;
+}
+
+
+/**** ACHIEVEMENT *****/ 
+
+.achievements{
+	position: absolute;
+	top : 10%;
+	right: 5%;
+	width: 20%;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.achievements .achievement { 
+	padding: 5%;
+}
+
+.achievements .achievement img{
+	display: inline-block;
+	width: 20%;
+	height: auto; 
+	vertical-align: middle;
+}
+
+.achievements .achievement p{
+	display: inline-block;
+	width: 70%;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+.achievements .more-achievements {
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid white;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.achievements .more-achievements img{
+	width: 10%;
+}
+
+/******* FOOTER *******/ 
+
+footer {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+	padding: 1% 15% 1% 15%;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+footer .text-meter{
+	display: inline-block;
+	vertical-align: middle;
+	width: 30%;
+	float: left;
+}
+
+footer .text-meter p:nth-child(1){
+	font-size: 14px;
+	display: inline-block;
+	text-align: right;
+	vertical-align: middle;
+}
+
+footer .text-meter span{
+	font-size: 40px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 2%;
+}
+
+footer .minerals {
+	float: right;
+	text-align: right;
+	width: 70%;
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+footer .counter{
+    display: inline-block;
+}
+
+footer .minerals img {
+	width: 7%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+footer .minerals img:nth-child(n+2){
+	margin-left: 20%;
+}
+
+footer .minerals span {
+	font-size: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 2%;
+}
+
+
+@media only screen and (max-width: 1290px) {
+
+
+	.shop .upgrade .icon-upgrade{
+		display: none;
+	}
+
+}
+
+@media only screen and (max-width: 1160px) {
+
+	footer .text-meter p:nth-child(2){
+		font-size: 30px;
+	}
+}
+
+@media only screen and (max-width: 990px) {
+
+	.tool {
+		height: 75%;
+		left: 15%;
+	}
+
+	.shop{
+		position: inherit;
+		width: 30%;
+		left: 90%;
+	}
+
+	.achievements{
+		position: inherit;
+		width: 30%;
+		margin-top: 20px;
+	}
+}
+
+@media only screen and (max-width: 770px) {
+
+
+	.tool {
+		height: 60%;
+	}
+	.condition-upgrade-responsive {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 690px){
+
+	footer {
+		padding: 1% 5% 1% 5%;
+	}
+}
+
+@media only screen and (max-width: 535px){
+	
+	footer .text-meter p:nth-child(1){
+		display: none;
+	}
+	
+	footer .minerals img:nth-child(n+2){
+		margin-left: 5%;
+	}
+}
+
+@media only screen and (max-width: 375px){
+
+	
+
+	footer .text-meter p:nth-child(2){
+		font-size: 40px;
+	}
+	
+	p{ font-size: 13px;}
+}
+
