@@ -5,7 +5,8 @@ $(document).ready(function(){
     var nI = 0,
         oI = 0,
         onePerc = window.innerHeight / 200,
-        dollar = 0, caillou = 0, silver = 0, gold = 0, copper = 0;
+        dollar = 0, meter = 0, blue = 0, yellow = 0, red = 0,
+        dropRed = 1, dropBlue = 5, dropYel = 15;
 
 
     $('body').mousewheel(function(event) {
@@ -13,14 +14,13 @@ $(document).ready(function(){
         if (event.deltaY <= -1) nI+=event.deltaFactor;
         bgScroll($('.bcg1'), $('.bcg2'));
         if (nI % 100 === 0) breakBlock();
-
         // console.log(event.deltaX, event.deltaY, event.deltaFactor, nI);
     });
     
     $('.sell-caillou').click(function(event) {
-        dollar += caillou * 1;
-        caillou = 0;
-        $('.counter-1>span').text(caillou);
+        dollar += meter * 1;
+        meter = 0;
+        $('.counter-1>span').text(meter);
         $('.counter-0>span').text(dollar);
     });
 
@@ -29,7 +29,7 @@ $(document).ready(function(){
         if (nI - oI >= 1.25){
             bgTop = parseFloat(bg1.css('top'));
             bgTop2 = parseFloat(bg2.css('top'));
-            nbPerc = (nI - oI) / 0.50;
+            nbPerc = (nI - oI) / 0.75;
             var value = bgTop - (nbPerc * onePerc);
             var value2 = bgTop2 - (nbPerc * onePerc);
             bg1.css('top', value+'px');
@@ -46,24 +46,27 @@ $(document).ready(function(){
 
     function breakBlock() {
         var x = Math.floor((Math.random() * 100));
+        var y = Math.floor((Math.random() * 100));
+        var z = Math.floor((Math.random() * 100));
+        console.log(x,y,z);
+        // console.log(dropYel,dropBlue,dropRed);
 
-        if (x >= 95) {
-            gold += 1;
-            $('.counter-4>span').text(gold);
+        if (x <= dropYel) {
+            yellow += 1;
+            $('.counter-2>span').text(yellow);
         }
-        if (x >= 85) {
-            silver += 1;
-            $('.counter-3>span').text(silver);
+        if (y <= dropBlue) {
+            blue += 1;
+            $('.counter-3>span').text(blue);
         }
-        if (x >= 70) {
-            copper += 1;
-            $('.counter-2>span').text(copper);
+        if (z <= dropRed) {
+            red += 1;
+            $('.counter-4>span').text(red);
         }
 
-        caillou += 1;
-        $('.counter-1>span').text(caillou);
+        meter += 1;
+        $('.counter-1>span').text(meter);
 
-        console.log(x);
     };
 
 });
