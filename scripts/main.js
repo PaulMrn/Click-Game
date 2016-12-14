@@ -16,16 +16,8 @@ $(document).ready(function(){
         if (nI % 100 === 0) breakBlock();
         // console.log(event.deltaX, event.deltaY, event.deltaFactor, nI);
     });
-    
-    $('.sell-caillou').click(function(event) {
-        dollar += meter * 1;
-        meter = 0;
-        $('.counter-1>span').text(meter);
-        $('.counter-0>span').text(dollar);
-    });
 
     function bgScroll(bg1, bg2) {
-        
         if (nI - oI >= 1.25){
             bgTop = parseFloat(bg1.css('top'));
             bgTop2 = parseFloat(bg2.css('top'));
