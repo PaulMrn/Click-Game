@@ -81,6 +81,10 @@ body{
 	margin-left: 10px;
 }
 
+.shop .name-upgrade{
+	display: inline-block;
+}
+
 .shop .upgrade .info-upgrade .condition-upgrade{
 	padding-top: 4px;
 }
