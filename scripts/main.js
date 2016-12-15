@@ -14,8 +14,6 @@ $(document).ready(function(){
         dropRateYelp = 1, dropRateRedp = 0, dropRateBluep = 0,
         dropNumYelp = 1, dropNumRedp = 0, dropNumBluep = 0;
     
-    
-
     $('body').mousewheel(function(event) {
         if (event.deltaFactor >= 10) event.deltaFactor = event.deltaFactor / 40;
         if (event.deltaY <= -1) nI+=event.deltaFactor;
