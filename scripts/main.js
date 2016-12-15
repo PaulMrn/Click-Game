@@ -12,7 +12,8 @@ $(document).ready(function(){
         numRate = false, dropNumRate = 20, numDrop = 1, dropNumCounter = 0,
         autoYelp = 1, autoRedp = 0, autoBluep = 0,
         dropRateYelp = 1, dropRateRedp = 0, dropRateBluep = 0,
-        dropNumYelp = 1, dropNumRedp = 0, dropNumBluep = 0;
+        dropNumYelp = 1, dropNumRedp = 0, dropNumBluep = 0,
+        toolCounter = 0, toolYelp = 0, toolBluep = 0, toolRedp =0;
     
     $('body').mousewheel(function(event) {
         if (event.deltaFactor >= 10) event.deltaFactor = event.deltaFactor / 40;
@@ -215,6 +216,12 @@ $(document).ready(function(){
                 $('.num-blue-price span').text(dropNumBluep);
                 $('.num-red-price span').text(dropNumRedp);
             }
+        }
+
+        function upTool() {
+            toolCounter =+ 1;
+
+
         }
 
 
