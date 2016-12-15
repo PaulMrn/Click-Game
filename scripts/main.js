@@ -215,14 +215,52 @@ $(document).ready(function(){
             }
         }
 
-        function upTool() {
-            toolCounter =+ 1;
-
-
+        function endLayer() {
+            
         }
-
-
 });
+
+var planet1 = { couche1 : {
+                    bg1: "assets/img/planets-bg/planet-1c1-1.jpg",
+                    bg2: "assets/img/planets-bg/planet-1c1-2.jpg",
+              },
+                couche2 : {
+                    bg1: "assets/img/planets-bg/planet-1c2-1.jpg",
+                    bg2: "assets/img/planets-bg/planet-1c2-2.jpg",
+              },
+                couche3 : {
+                    bg1: "assets/img/planets-bg/planet-1c3-1.jpg",
+                    bg2: "assets/img/planets-bg/planet-1c3-2.jpg",
+              }
+};
+
+var planet2 = { couche1 : {
+                    bg1: "assets/img/planets-bg/planet-2c1-1.jpg",
+                    bg2: "assets/img/planets-bg/planet-2c1-2.jpg",
+              },
+                couche2 : {
+                    bg1: "assets/img/planets-bg/planet-2c2-1.jpg",
+                    bg2: "assets/img/planets-bg/planet-2c2-2.jpg",
+              },
+                couche3 : {
+                    bg1: "assets/img/planets-bg/planet-2c3-1.jpg",
+                    bg2: "assets/img/planets-bg/planet-2c3-2.jpg",
+              }
+};
+
+var planet3 = { couche1 : {
+                    bg1: "assets/img/planets-bg/planet-3c1-1.jpg",
+                    bg2: "assets/img/planets-bg/planet-3c1-2.jpg",
+              },
+                couche2 : {
+                    bg1: "assets/img/planets-bg/planet-3c2.jpg",
+                    bg2: "assets/img/planets-bg/planet-3c2.jpg",
+              },
+                couche3 : {
+                    bg1: "assets/img/planets-bg/planet-3c3-1.jpg",
+                    bg2: "assets/img/planets-bg/planet-3c3-2.jpg",
+              }
+};
 
 function resize(){
     var iw = window.innerWidth,
