@@ -5,7 +5,7 @@ $(document).ready(function(){
     var nI = 0, autonI = 1.25,
         oI = 0,
         onePerc = window.innerHeight / 200,
-        meter = 0, blue = 100, yellow = 1000, red = 100,
+        meter = 0, blue = 0, yellow = 0, red = 0,
         dropRed = 1, dropBlue = 5, dropYel = 15,
         breakValue = 60, scrollRate = 1.5,
         autoCounter = 0, manCounter = 0, dropRateCounter = 0,
@@ -25,9 +25,6 @@ $(document).ready(function(){
     
     var autoScrollBuy = document.querySelector('.autoscroll-buy');
     autoScrollBuy.addEventListener("click", autoScroll);
-
-    // var manualBuy = document.querySelector('.manual-buy');
-    // manualBuy.addEventListener("click", upgradeManualScroll);
 
     var dropRateBuy = document.querySelector('.dropRate-buy');
     dropRateBuy.addEventListener("click", upDropRate);

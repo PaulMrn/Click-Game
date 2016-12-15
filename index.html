@@ -1,151 +1,211 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Projet</title>
-  <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="styles/reset.css">
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>Projet</title>
+		<link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles/reset.css">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+	</head>
 
-<body>
-  <div class="content">
-    <div class="bcgs">
-      <div class="start-screen"><img class="bcgImg" src="" alt=""></div>
-      <div class="bcg1"><img class="bcgImg" src="assets/img/planets-bg/planet-1c1-1.jpg" alt=""></div>
-      <div class="bcg2"><img class="bcgImg" src="assets/img/planets-bg/planet-1c1-2.jpg" alt=""></div>
-    </div>
-    <div class="tool middle-align"><img src="images/outil-p1c3.png" alt="" class="toolImg middle-center"></div>
-
-    <div class="one-screen-view">
-
-			<!----------- TOOL ------------->
-			<!--<div class="tool">
-				<img src="assets/img/tools/drill-icon.png" alt="#">
+	<body>
+	
+			<!--------- HOME ------
+		<div class="home">			
+			<div class="left">
+				<picture>
+					<source srcset="assets/img/logo/logo4.png" media="(max-width:500px)">
+					<source srcset="assets/img/logo/logo1.png" media="(max-width:720px)">
+					<source srcset="assets/img/logo/logo2.png" media="(max-width:1000px)">
+					<source srcset="assets/img/logo/logo.png" media="(min-width:1280px)">
+					<img src="assets/img/logo/logo.png">
+				</picture>
 			</div>
-			<div class="wrapper">-->
 
-				<!-------- SHOP ---------->
-				<div class="shop">
-					<div class="upgrade">
-						<div class="info-upgrade">
-							<div class="name-upgrade">AutoScroll 	&nbsp| 	&nbsp x 	&nbsp</div><span class="autoscroll-counter">0</span>
-							<div class="condition-upgrade">
-								<div class="condition-upgrade-responsive auto-yel-price">
-									<img src="assets/img/minerals/mineral-1.png" alt="#">
-									<span>1</span>
-								</div>
-								<div class="condition-upgrade-responsive auto-blue-price">
-									<img src="assets/img/minerals/mineral-2.png" alt="#">
-									<span>0</span>
-								</div>
-								<div class="condition-upgrade-responsive auto-red-price">
-									<img src="assets/img/minerals/mineral-3.png" alt="#">
-									<span>0</span>
-								</div>
-							</div>
-						</div>
-						<div class="buy-upgrade autoscroll-buy"><img src="assets/img/shopping-icon.png" alt=""></div>
-					</div>
-					
-					<div class="upgrade">
-						<div class="info-upgrade">
-							<div class="name-upgrade">Scroll manuel 	&nbsp| 	&nbsp x 	&nbsp</div><span class="manual-counter" >0</span>
-							<div class="condition-upgrade">
-								<div class="condition-upgrade-responsive">
-									<img src="assets/img/minerals/mineral-1.png" alt="#">
-									<p>020</p>
-								</div>
-								<div class="condition-upgrade-responsive">
-									<img src="assets/img/minerals/mineral-2.png" alt="#">
-									<p>030</p>
-								</div>
-								<div class="condition-upgrade-responsive">
-									<img src="assets/img/minerals/mineral-3.png" alt="#">
-									<p>020</p>
-								</div>
-							</div>
-						</div>
-						<div class="buy-upgrade manual-buy"><img src="assets/img/shopping-icon.png" alt=""></div>
-					</div>
-					
-					<div class="upgrade">
-						<div class="info-upgrade">
-							<div class="name-upgrade">Drop Rate 	&nbsp| 	&nbsp x 	&nbsp</div><span class="dropRate-counter" >0</span>
-							<div class="condition-upgrade">
-								<div class="condition-upgrade-responsive rate-yel-price">
-									<img src="assets/img/minerals/mineral-1.png" alt="#">
-									<span>1</span>
-								</div>
-								<div class="condition-upgrade-responsive rate-blue-price">
-									<img src="assets/img/minerals/mineral-2.png" alt="#">
-									<span>0</span>
-								</div>
-								<div class="condition-upgrade-responsive rate-red-price">
-									<img src="assets/img/minerals/mineral-3.png" alt="#">
-									<span>0</span>
+			<div class="right">
+				<div class="txt">
+					<p>Creusez jusqu'au centre de la Terre pour trouver différents minerais avec lesquels vous pourrez améliorer vos outils et atteindre d’autres planète. Faites défiler votre molette vers le bas afin d’activer votre foreuse. </p>
+					<a href="#" class="button-play" title="Play">		
+					Play
+					</a>
+				</div>
+			</div>
+		</div>-->
+		
+		<div class="content">
+			<div class="bcgs">
+				<div class="start-screen">
+					<img class="bcgImg" src="" alt="">
+				</div>
+				<div class="bcg1">
+					<img class="bcgImg" src="assets/img/planets-bg/planet-1c1-1.jpg" alt="sable">
+				</div>
+				<div class="bcg2">
+					<img class="bcgImg" src="assets/img/planets-bg/planet-1c1-2.jpg" alt="">
+				</div>
+			</div>
+			<div class="tool middle-align">
+				<img src="assets/img/tools/outil-p1c3.png" alt="drill" class="toolImg middle-center"></div>
+
+
+		
+			<div class="one-screen-view">
+
+				<!----------- TOOL ------------->
+				<!--<div class="tool">
+<img src="assets/img/tools/drill-icon.png" alt="#">
+</div>
+<div class="wrapper">-->
+
+				<div class="block-left">
+					<!-------- SHOP ---------->
+					<div class="shop">
+						<div class="upgrade">
+							<img class="icon-upgrade" src="assets/img/minerals/mineral-2.png" alt="">
+							<div class="info-upgrade">
+							
+								<div class="name-upgrade">AutoScroll 	&nbsp| 	&nbsp x 	&nbsp</div><span class="autoscroll-counter">0</span>
+								<div class="buy-upgrade autoscroll-buy"> BUY </div>
+								<div class="condition-upgrade">
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-1.png" alt="#">
+										<p>020</p>
+									</div>
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-2.png" alt="#">
+										<p>030</p>
+									</div>
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-3.png" alt="#">
+										<p>020</p>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="buy-upgrade dropRate-buy"><img src="assets/img/shopping-icon.png" alt=""></div>
-					</div>
-					
-					<div class="upgrade">
-						<div class="info-upgrade">
-							<div class="name-upgrade">Drop Number 	&nbsp| 	&nbsp x 	&nbsp</div><span class="dropNum-counter" >0</span>
-							<div class="condition-upgrade">
-								<div class="condition-upgrade-responsive num-yel-price">
-									<img src="assets/img/minerals/mineral-1.png" alt="#">
-									<span>1</span>
-								</div>
-								<div class="condition-upgrade-responsive num-blue-price">
-									<img src="assets/img/minerals/mineral-2.png" alt="#">
-									<span>0</span>
-								</div>
-								<div class="condition-upgrade-responsive num-red-price">
-									<img src="assets/img/minerals/mineral-3.png" alt="#">
-									<span>0</span>
-								</div>
-							</div>
-						</div>
-						<div class="buy-upgrade dropNum-buy"><img src="assets/img/shopping-icon.png" alt=""></div>
-					</div>
-					
-					<div class="upgrade">
-						<div class="info-upgrade">
-							<div class="name-upgrade">BOOSTER</div>
-							<div class="condition-upgrade">
-								<div class="condition-upgrade-responsive">
-									<img src="assets/img/minerals/mineral-1.png" alt="#">
-									<p>020</p>
-								</div>
-								<div class="condition-upgrade-responsive">
-									<img src="assets/img/minerals/mineral-2.png" alt="#">
-									<p>030</p>
-								</div>
-								<div class="condition-upgrade-responsive">
-									<img src="assets/img/minerals/mineral-3.png" alt="#">
-									<p>020</p>
+						<div class="upgrade">
+							<img class="icon-upgrade" src="assets/img/minerals/mineral-2.png" alt="">
+							<div class="info-upgrade">
+								<div class="name-upgrade">Scroll manuel 	&nbsp| 	&nbsp x 	&nbsp</div><span class="manual-counter" >0</span>
+								<div class="buy-upgrade manual-buy"> BUY </div>
+								<div class="condition-upgrade">
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-1.png" alt="#">
+										<p>020</p>
+									</div>
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-2.png" alt="#">
+										<p>030</p>
+									</div>
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-3.png" alt="#">
+										<p>020</p>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="buy-upgrade"><img src="assets/img/shopping-icon.png" alt=""></div>
+						<div class="upgrade">
+							<img class="icon-upgrade" src="assets/img/minerals/mineral-2.png" alt="">
+							<div class="info-upgrade">
+								<div class="name-upgrade"> Drop Rate 	&nbsp| 	&nbsp x 	&nbsp</div><span class="dropRate-counter" >0</span>
+								<div class="buy-upgrade dropRate-buy"> BUY </div>
+								<div class="condition-upgrade">
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-1.png" alt="#">
+										<p>020</p>
+									</div>
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-2.png" alt="#">
+										<p>030</p>
+									</div>
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-3.png" alt="#">
+										<p>020</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="upgrade">
+							<img class="icon-upgrade" src="assets/img/minerals/mineral-2.png" alt="">
+							<div class="info-upgrade">
+								<div class="name-upgrade"> Drop Number 	&nbsp| 	&nbsp x 	&nbsp</div><span class="dropNum-counter" >0</span>
+								<div class="buy-upgrade dropNum-buy"> BUY </div>
+								<div class="condition-upgrade">
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-1.png" alt="#">
+										<p>020</p>
+									</div>
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-2.png" alt="#">
+										<p>030</p>
+									</div>
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-3.png" alt="#">
+										<p>020</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="upgrade">
+							<img class="icon-upgrade" src="assets/img/minerals/mineral-2.png" alt="">
+							<div class="info-upgrade">
+								<div class="name-upgrade">BOOSTER</div>
+								<div class="buy-upgrade autoscroll-buy"> BUY </div>
+								<div class="condition-upgrade">
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-1.png" alt="#">
+										<p>020</p>
+									</div>
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-2.png" alt="#">
+										<p>030</p>
+									</div>
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-3.png" alt="#">
+										<p>020</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="upgrade">
+							<img class="icon-upgrade" src="assets/img/minerals/mineral-2.png" alt="">
+							<div class="info-upgrade">
+								<div class="name-upgrade">BOOSTER</div>
+								<div class="buy-upgrade autoscroll-buy"> BUY </div>
+								<div class="condition-upgrade">
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-1.png" alt="#">
+										<p>020</p>
+									</div>
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-2.png" alt="#">
+										<p>030</p>
+									</div>
+									<div class="condition-upgrade-responsive">
+										<img src="assets/img/minerals/mineral-3.png" alt="#">
+										<p>020</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					
+
+					<!--------- ACHIEVEMENTS --------->
+					<div class="achievements">
+						<div class="achievement">
+							<img src="assets/img/achievements-icons/record-meter.png" alt="record de distance">
+							<p> Vous avez parcouru 300m !</p>
+						</div>
+					</div>
+
 				</div>
 
-				<!--------- ACHIEVEMENTS --------->
-				<div class="achievements">
-					<div class="achievement">
-						<img src="assets/img/achievements-icons/record-meter.png" alt="record de distance">
-						<p> Vous avez parcouru 300m !</p>
-					</div>
-
-					<div class="more-achievements">
-						<img src="assets/img/arrow-down.png" alt="#">
+				<!------ PROGRESS ------>
+				<div class="progress">
+					<div class="progress-bar">
+						<img src="assets/img/tools/drill-icon.png" alt="#">
 					</div>
 				</div>
-
 			</div>
 			<!------ FOOTER ------>
 			<footer>
@@ -164,11 +224,11 @@
 			</footer>
 
 		</div> <!-- END one screen view -->
-  </div>
+		</div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-  <script src="scripts/jquery.mousewheel.js"></script>
-  <script src="scripts/main.js"></script>
-</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+	<script src="scripts/jquery.mousewheel.js"></script>
+	<script src="scripts/main.js"></script>
+	</body>
 
 </html>

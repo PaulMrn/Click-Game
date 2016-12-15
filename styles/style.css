@@ -1,52 +1,122 @@
 body{
-    margin: 0 auto;
-    overflow: hidden;
-    background: #eee;
+	margin: 0 auto;
+	overflow: hidden;
+	background: #eee;
 	font-family: 'Oswald', sans-serif;
 	font-size: 14px;
 	font-weight: regular;
 	color: #494949;
-    line-height: 15px;
+	line-height: 15px;
 }
 
 .middle-align{
-    position: absolute;
-    top: 50%;
-    left: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
 }
 
 .middle-center{
-    transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .content{
-    position: relative;
+	position: relative;
 }
 
 .bcg1{
-    position: absolute;
-    top: 100%;
+	position: absolute;
+	top: 100%;
 }
 
 .bcg2 {
-    position: absolute;
-    top: 200%;
+	position: absolute;
+	top: 200%;
 }
 
 .toolImg{
-    height: auto;
+	height: auto;
 }
 
 .start-screen {
-    background-color: #c8a97d;
+	background-color: #c8a97d;
 }
 
 /**********************************/
 
-.one-screen-view{
+/***** HOME ******/
+.home{
 	width: 100%;
 	height: 100%;
+	position: absolute;
+	z-index: 999;
+	display: flex;
+}
 
+.left, .right {
+	background: #4f545b;
+	width: 50%;
+	height: 100%;
+	z-index: 999;
+	position: relative;
+	display: inline-block;
+	transition-timing-function: ease-in;
+	transition-duration: 1s;
+}
+
+.left.move{
+	transform: translateX(-100%);
+	transition-timing-function: ease-in;
+	pointer-events: none;
+}
+
+.right.move{
+	transform: translateX(100%);
+	transition-timing-function: ease-in;
+	pointer-events: none;
+}
+
+.left picture{
+	display: block;
+	margin: 20% auto;	
+}
+
+.txt{
+	margin: 30% auto;
+	width: 70%;
+}
+
+.txt p{
+	display: block;
+	margin: 5% auto;
+	height: auto;
+	text-align: center;
+	line-height: 1.3em;
+	font-size: 1.5em;
+	color: #fff;
+}
+
+.button-play{
+	display: block;
+	margin:0 auto;
+	width: 80%;
+	height: auto;
+	background-color: #b47725;
+	border: #915e19 2px solid;
+	border-radius: 30px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2em;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.one-screen-view{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .wrapper {
@@ -56,17 +126,27 @@ body{
 
 /****** SHOP ******/ 
 
-.shop {
+.block-responsive{
+	background-color: tomato;
+}
+
+.block-left{
 	position: absolute;
 	top: 10%;
 	width: 20%;
-	background-color: rgba(255, 255, 255, 0.7);
+	height: 60%;
+}
+
+.shop {
+	background-color: rgba(250, 250, 250, 0.6);
+	height: 60%;
+	overflow: scroll;
 }
 
 .shop .upgrade {
-	border-bottom: 1px solid white;
-	width: 100%;
+	border-bottom: 1px solid rgba(250, 250, 250, 0.8);
 	padding: 5%;
+	height: 25%;
 }
 
 .shop .upgrade .icon-upgrade {
@@ -81,16 +161,25 @@ body{
 	margin-left: 10px;
 }
 
-.shop .name-upgrade{
+.shop .upgrade .info-upgrade div:nth-child(1), .shop .upgrade .info-upgrade div:nth-child(2){
 	display: inline-block;
 }
 
+.shop .upgrade .info-upgrade .buy-update{
+	float: right;
+	border: white 1px solid;
+	padding: 4px;
+	font-size: 10px;
+	background-color: rgba(250, 250, 250, 0.6);
+}
+
 .shop .upgrade .info-upgrade .condition-upgrade{
-	padding-top: 4px;
+	padding-top: 10px;
 }
 
 .condition-upgrade-responsive{
 	display: inline-block;
+	margin-left: 8px;
 }
 
 .shop .upgrade .info-upgrade .condition-upgrade img {
@@ -102,6 +191,7 @@ body{
 .shop .upgrade .info-upgrade .condition-upgrade p {
 	display: inline-block;
 	vertical-align: middle;
+	font-weight: lighter;
 }
 
 .shop .upgrade .buy-upgrade {
@@ -118,18 +208,20 @@ body{
 }
 
 
+
 /**** ACHIEVEMENT *****/ 
 
 .achievements{
 	position: absolute;
-	top : 10%;
-	right: 5%;
-	width: 20%;
-	background-color: rgba(255, 255, 255, 0.7);
+	bottom: 0;
+	height: 20%;
+	width: 100%;
+	background-color: rgba(250, 250, 250, 0.6);
 }
 
 .achievements .achievement { 
 	padding: 5%;
+
 }
 
 .achievements .achievement img{
@@ -142,36 +234,51 @@ body{
 .achievements .achievement p{
 	display: inline-block;
 	width: 70%;
-	margin-left: 10px;
 	vertical-align: middle;
+	font-weight: lighter;
 }
 
-.achievements .more-achievements {
-	width: 100%;
-	text-align: center;
-	border-top: 1px solid white;
-	background-color: rgba(255, 255, 255, 0.8);
+/******* PROGRESS BAR *******/ 
+
+.progress {
+	position: absolute;
+	right: 0;
+	top: 10%;
+	height: 60%;
+	width: 40px;
+	background-color: rgba(250, 250, 250, 0.6);
 }
 
-.achievements .more-achievements img{
-	width: 10%;
+.progress-bar{
+	position: relative;
+	width: 7px;
+	margin: auto;
+	height: 100%; 
+	background-color: rgba(120, 120, 120, 0.6)
 }
 
-/******* FOOTER *******/ 
+.progress-bar img {
+	position: absolute;
+	left: -18px;
+	width: 45px;
+	height: auto;
+}
+
+/******* FOOTER *****/
 
 footer {
 	position: absolute;
-	bottom: 30px;
+	bottom: 0;
+	margin-bottom: 30px;
 	width: 100%;
-	padding: 1% 15% 1% 15%;
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(250, 250, 250, 0.6);
+	padding: 1% 10% 1% 10%;
 }
 
 footer .text-meter{
 	display: inline-block;
 	vertical-align: middle;
 	width: 30%;
-	float: left;
 }
 
 footer .text-meter p:nth-child(1){
@@ -179,6 +286,7 @@ footer .text-meter p:nth-child(1){
 	display: inline-block;
 	text-align: right;
 	vertical-align: middle;
+	font-weight: lighter;
 }
 
 footer .text-meter span{
@@ -189,16 +297,17 @@ footer .text-meter span{
 }
 
 footer .minerals {
+	display: inline-block;
+	vertical-align: middle;
 	float: right;
 	text-align: right;
 	width: 70%;
 	height: 100%;
-	display: inline-block;
-	vertical-align: middle;
+
 }
 
 footer .counter{
-    display: inline-block;
+	display: inline-block;
 }
 
 footer .minerals img {
@@ -219,79 +328,90 @@ footer .minerals span {
 }
 
 
-@media only screen and (max-width: 1290px) {
-
+@media only screen and (max-width: 1250px) {
 
 	.shop .upgrade .icon-upgrade{
 		display: none;
 	}
-
 }
 
-@media only screen and (max-width: 1160px) {
+@media only screen and (max-width: 1070px) {
 
-	footer .text-meter p:nth-child(2){
-		font-size: 30px;
+	.block-left {
+		height: 88%;
+		top: 0;
 	}
-}
 
-@media only screen and (max-width: 990px) {
+	.achievements .achievement {
+		text-align: center;
+	}
+
+	.achievements .achievement img{
+		width: 25%;
+	}
+
+	.achievements .achievement p{
+		width: 100%;
+	}
+
+	@media only screen and (max-width: 1043px) {
+
+		.shop {
+			height: 75%;
+		}
+	}
+
+	@media only screen and (max-width: 770px){
+		.txt p{
+			font-size: 1.2em;
+		}
+	}
+
+	@media only screen and (max-width: 375px){
+		.txt p{
+			font-size: 1em;
+		}
+		
+	}
+
+	/*
+	@media only screen and (max-width: 770px) {
+
 
 	.tool {
-		height: 75%;
-		left: 15%;
-	}
-
-	.shop{
-		position: inherit;
-		width: 30%;
-		left: 90%;
-	}
-
-	.achievements{
-		position: inherit;
-		width: 30%;
-		margin-top: 20px;
-	}
+	height: 60%;
 }
-
-@media only screen and (max-width: 770px) {
-
-
-	.tool {
-		height: 60%;
-	}
 	.condition-upgrade-responsive {
-		display: block;
-	}
+	display: block;
+}
 }
 
-@media only screen and (max-width: 690px){
+	@media only screen and (max-width: 690px){
 
 	footer {
-		padding: 1% 5% 1% 5%;
-	}
+	padding: 1% 5% 1% 5%;
+}
 }
 
-@media only screen and (max-width: 535px){
-	
+	@media only screen and (max-width: 535px){
+
 	footer .text-meter p:nth-child(1){
-		display: none;
-	}
-	
-	footer .minerals img:nth-child(n+2){
-		margin-left: 5%;
-	}
+	display: none;
 }
 
-@media only screen and (max-width: 375px){
+	footer .minerals img:nth-child(n+2){
+	margin-left: 5%;
+}
+}
 
-	
+	@media only screen and (max-width: 375px){
+
+
 
 	footer .text-meter p:nth-child(2){
-		font-size: 40px;
-	}
-	
+	font-size: 40px;
+}
+
 	p{ font-size: 13px;}
 }
 
