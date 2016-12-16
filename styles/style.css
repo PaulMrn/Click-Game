@@ -9,14 +9,21 @@ body{
 	line-height: 15px;
 }
 
+canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 30;
+}
+
 .middle-align{
 	position: absolute;
-	top: 50%;
+	top: 0%;
 	left: 50%;
 }
 
 .middle-center{
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, 0%);
 }
 
 .content{
@@ -38,7 +45,7 @@ body{
 }
 
 .start-screen {
-	background-color: #c8a97d;
+	background-color: #859eb2;
 }
 
 /**********************************/
@@ -117,6 +124,7 @@ body{
 	left: 0;
 	width: 100%;
 	height: 100%;
+	z-index: 100;
 }
 
 .wrapper {
@@ -126,27 +134,22 @@ body{
 
 /****** SHOP ******/ 
 
-.block-responsive{
-	background-color: tomato;
-}
-
 .block-left{
 	position: absolute;
 	top: 10%;
-	width: 20%;
+	width: 25%;
 	height: 60%;
 }
 
 .shop {
 	background-color: rgba(250, 250, 250, 0.6);
-	height: 60%;
-	overflow: scroll;
+	overflow: hidden;
 }
 
 .shop .upgrade {
 	border-bottom: 1px solid rgba(250, 250, 250, 0.8);
 	padding: 5%;
-	height: 25%;
+	height: 33%;
 }
 
 .shop .upgrade .icon-upgrade {
@@ -200,6 +203,7 @@ body{
 	width: 15%;
 	height: 100%;
 	vertical-align: top;
+	cursor: pointer;
 }
 
 .shop .upgrade .buy-upgrade img{
@@ -328,90 +332,75 @@ footer .minerals span {
 }
 
 
-@media only screen and (max-width: 1250px) {
-
-	.shop .upgrade .icon-upgrade{
+@media only screen and (max-width: 980px) {
+	.shop .upgrade .icon-upgrade {
 		display: none;
 	}
+	footer {
+		margin-bottom: 30px;
+	}
 }
 
-@media only screen and (max-width: 1070px) {
+@media only screen and (max-width: 840px){
 
 	.block-left {
-		height: 88%;
-		top: 0;
+		width: 100%;
+		height: 30%;
+		top: 55%;
 	}
-
-	.achievements .achievement {
-		text-align: center;
+	
+	.shop{
+		width: 70%;
+		display: inline-block;
+		height: 100%
 	}
-
-	.achievements .achievement img{
-		width: 25%;
+	
+	.upgrade {
+		padding: 2%;
 	}
-
-	.achievements .achievement p{
+	
+	.shop .upgrade .info-upgrade{
 		width: 100%;
 	}
-
-	@media only screen and (max-width: 1043px) {
-
-		.shop {
-			height: 75%;
-		}
+	
+	.shop .upgrade .info-upgrade .name-upgrade {
+		display: inline-block;
 	}
-
-	@media only screen and (max-width: 770px){
-		.txt p{
-			font-size: 1.2em;
-		}
+	
+	.shop .upgrade .info-upgrade .condition-upgrade {
+		display: inline-block;
+		margin-left: 10%;
+		width: 70%;
 	}
-
-	@media only screen and (max-width: 375px){
-		.txt p{
-			font-size: 1em;
-		}
+	
+	.achievements{
+		display: inline-block;
+		width: 30%;
+		position: inherit;
+		top: 0;
+		bottom: inherit;
+		height: 100%;
+		padding: 5%;
+		background-color: rgba(250, 250, 250, 0.6);
+		border: 1px solid rgba(250, 250, 250, 0.8);
+	}
+	
+	.achievements .achievement{
+		padding: 0;
+		text-align: center;
 		
 	}
-
-	/*
-	@media only screen and (max-width: 770px) {
-
-
-	.tool {
-	height: 60%;
+	
+	.achievements .achievement img {
+		width: 30%;
+		display: block;
+		margin: auto;
+	}
+	
+	.achievements .achievement p {
+		display: block;
+		width: 70%;
+		margin: auto;
+		margin-top: 30%;
+	}
 }
-	.condition-upgrade-responsive {
-	display: block;
-}
-}
-
-	@media only screen and (max-width: 690px){
-
-	footer {
-	padding: 1% 5% 1% 5%;
-}
-}
-
-	@media only screen and (max-width: 535px){
-
-	footer .text-meter p:nth-child(1){
-	display: none;
-}
-
-	footer .minerals img:nth-child(n+2){
-	margin-left: 5%;
-}
-}
-
-	@media only screen and (max-width: 375px){
-
-
-
-	footer .text-meter p:nth-child(2){
-	font-size: 40px;
-}
-
-	p{ font-size: 13px;}
-}
-
